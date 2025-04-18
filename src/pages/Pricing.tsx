@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Pricing = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -152,9 +158,36 @@ const Pricing = () => {
                 answer: "Yes! Our pricing is already education-focused, and we offer additional discounts for large institutions. Contact us to learn more about our educational pricing options."
               }
             ].map((faq, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-semibold mb-2">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
+              <div 
+                key={index} 
+                className="bg-white p-6 rounded-lg shadow-sm cursor-pointer transition-all duration-200 hover:shadow-md"
+                onClick={() => toggleFAQ(index)}
+              >
+                <div className="flex justify-between items-center">
+                  <h3 className="text-lg font-semibold">{faq.question}</h3>
+                  <svg
+                    className={`w-5 h-5 transform transition-transform duration-200 ${
+                      openIndex === index ? 'rotate-180' : ''
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+                <div
+                  className={`mt-4 text-gray-600 transition-all duration-200 ${
+                    openIndex === index ? 'block' : 'hidden'
+                  }`}
+                >
+                  {faq.answer}
+                </div>
               </div>
             ))}
           </div>

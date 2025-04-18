@@ -210,124 +210,104 @@ function Home() {
             </Link>
           </div>
 
-          {/* School Images */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-on-scroll">
-            <div className="group relative overflow-hidden rounded-xl shadow-lg">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <img
-                src="https://media.mathgpt.ai/wp/2024/10/10102227/classroom-1024x684.jpg"
-                alt="Traditional classroom"
-                className="w-full h-auto rounded-lg transform group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="group relative overflow-hidden rounded-xl shadow-lg">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <img
-                src="https://media.mathgpt.ai/wp/2024/10/10102227/lecture-hall-1024x684.jpg"
-                alt="Modern lecture hall"
-                className="w-full h-auto rounded-lg transform group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Comparison */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* AI Tutor */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-on-scroll">
-              <img 
-                loading="lazy" 
-                decoding="async" 
-                width="1232" 
-                height="960" 
-                src="https://media.mathgpt.ai/wp/2024/10/14085522/feature-ai-tutor.png" 
-                alt="AI Tutor feature" 
-                className="w-full h-auto rounded-t-xl"
-                srcSet="https://media.mathgpt.ai/wp/2024/10/14085522/feature-ai-tutor.png 1232w, https://media.mathgpt.ai/wp/2024/10/14085522/feature-ai-tutor-300x234.png 300w, https://media.mathgpt.ai/wp/2024/10/14085522/feature-ai-tutor-1024x798.png 1024w, https://media.mathgpt.ai/wp/2024/10/14085522/feature-ai-tutor-768x598.png 768w"
-                sizes="(max-width: 1232px) 100vw, 1232px"
-              />
-              <div className="p-8">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
+          {/* Features Comparison */}
+          <section className="py-20 px-4 bg-white">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                {/* AI Tutor */}
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-on-scroll">
+                  <img 
+                    loading="lazy" 
+                    decoding="async" 
+                    width="1232" 
+                    height="960" 
+                    src="https://media.mathgpt.ai/wp/2024/10/14085522/feature-ai-tutor.png" 
+                    alt="AI Tutor feature" 
+                    className="w-full h-auto rounded-t-xl"
+                    srcSet="https://media.mathgpt.ai/wp/2024/10/14085522/feature-ai-tutor.png 1232w, https://media.mathgpt.ai/wp/2024/10/14085522/feature-ai-tutor-300x234.png 300w, https://media.mathgpt.ai/wp/2024/10/14085522/feature-ai-tutor-1024x798.png 1024w, https://media.mathgpt.ai/wp/2024/10/14085522/feature-ai-tutor-768x598.png 768w"
+                    sizes="(max-width: 1232px) 100vw, 1232px"
+                  />
+                  <div className="p-8">
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                    </div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#353337] mb-4">
+                      AI Tutor
+                    </h2>
+                    <p className="text-lg text-[#353337] mb-6">
+                      MathGPT is the first and only AI system that can reliably and accurately interpret and tutor STEM education.
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      {["Accurate", "Conversational", "Always available"].map((feature, index) => (
+                        <li key={feature} className="flex items-start" style={{ animationDelay: `${index * 0.2}s` }}>
+                          <span className="flex-shrink-0 h-6 w-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                            <svg className="h-4 w-4 text-green-600" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                          </span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link to="/features" className="inline-flex items-center px-5 py-2 rounded-md bg-blue-600 text-white font-medium shadow-md hover:shadow-lg transform transition-all duration-300 hover:-translate-y-0.5">
+                      Learn more
+                      <svg className="ml-2 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#353337] mb-4">
-                  AI Tutor
-                </h2>
-                <p className="text-lg text-[#353337] mb-6">
-                  MathGPT is the first and only AI system that can reliably and accurately interpret and tutor STEM education.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  {["Accurate", "Conversational", "Always available"].map((feature, index) => (
-                    <li key={feature} className="flex items-start" style={{ animationDelay: `${index * 0.2}s` }}>
-                      <span className="flex-shrink-0 h-6 w-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                        <svg className="h-4 w-4 text-green-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/features" className="inline-flex items-center px-5 py-2 rounded-md bg-blue-600 text-white font-medium shadow-md hover:shadow-lg transform transition-all duration-300 hover:-translate-y-0.5">
-                  Learn more
-                  <svg className="ml-2 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </Link>
+
+                {/* Course & Assignment Manager */}
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-on-scroll">
+                  <img 
+                    loading="lazy" 
+                    decoding="async" 
+                    width="1232" 
+                    height="960" 
+                    src="https://media.mathgpt.ai/wp/2024/10/14085829/feature-course-assignment-manager.png" 
+                    alt="Course & Assignment Manager feature" 
+                    className="w-full h-auto rounded-t-xl"
+                    srcSet="https://media.mathgpt.ai/wp/2024/10/14085829/feature-course-assignment-manager.png 1232w, https://media.mathgpt.ai/wp/2024/10/14085829/feature-course-assignment-manager-300x234.png 300w, https://media.mathgpt.ai/wp/2024/10/14085829/feature-course-assignment-manager-1024x798.png 1024w, https://media.mathgpt.ai/wp/2024/10/14085829/feature-course-assignment-manager-768x598.png 768w"
+                    sizes="(max-width: 1232px) 100vw, 1232px"
+                  />
+                  <div className="p-8">
+                    <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                      </svg>
+                    </div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#353337] mb-4">
+                      Course & Assignment Manager
+                    </h2>
+                    <p className="text-lg text-[#353337] mb-6">
+                      MathGPT is pioneering the first AI-powered Teaching and Learning App designed to amplify the capacities of college math instructors.
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      {["Scalable", "Cheat-proof", "Time-saving"].map((feature, index) => (
+                        <li key={feature} className="flex items-start" style={{ animationDelay: `${index * 0.2}s` }}>
+                          <span className="flex-shrink-0 h-6 w-6 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                            <svg className="h-4 w-4 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                          </span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link to="/solutions" className="inline-flex items-center px-5 py-2 rounded-md bg-indigo-600 text-white font-medium shadow-md hover:shadow-lg transform transition-all duration-300 hover:-translate-y-0.5">
+                      Learn more
+                      <svg className="ml-2 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
-
-            {/* Course & Assignment Manager */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-on-scroll">
-              <img 
-                loading="lazy" 
-                decoding="async" 
-                width="1232" 
-                height="960" 
-                src="https://media.mathgpt.ai/wp/2024/10/14085829/feature-course-assignment-manager.png" 
-                alt="Course & Assignment Manager feature" 
-                className="w-full h-auto rounded-t-xl"
-                srcSet="https://media.mathgpt.ai/wp/2024/10/14085829/feature-course-assignment-manager.png 1232w, https://media.mathgpt.ai/wp/2024/10/14085829/feature-course-assignment-manager-300x234.png 300w, https://media.mathgpt.ai/wp/2024/10/14085829/feature-course-assignment-manager-1024x798.png 1024w, https://media.mathgpt.ai/wp/2024/10/14085829/feature-course-assignment-manager-768x598.png 768w"
-                sizes="(max-width: 1232px) 100vw, 1232px"
-              />
-              <div className="p-8">
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                  </svg>
-                </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#353337] mb-4">
-                  Course & Assignment Manager
-                </h2>
-                <p className="text-lg text-[#353337] mb-6">
-                  MathGPT is pioneering the first AI-powered Teaching and Learning App designed to amplify the capacities of college math instructors.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  {["Scalable", "Cheat-proof", "Time-saving"].map((feature, index) => (
-                    <li key={feature} className="flex items-start" style={{ animationDelay: `${index * 0.2}s` }}>
-                      <span className="flex-shrink-0 h-6 w-6 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
-                        <svg className="h-4 w-4 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/solutions" className="inline-flex items-center px-5 py-2 rounded-md bg-indigo-600 text-white font-medium shadow-md hover:shadow-lg transform transition-all duration-300 hover:-translate-y-0.5">
-                  Learn more
-                  <svg className="ml-2 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          </div>
+          </section>
         </div>
       </section>
 
