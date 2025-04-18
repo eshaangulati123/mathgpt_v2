@@ -87,10 +87,10 @@ function Home() {
       </section>
 
       {/* Scrolling Logo Bar - right after hero */}
-      <section className="py-6 overflow-hidden bg-white border-y border-gray-100">
+      <section className="py-10 overflow-hidden bg-white border-y border-gray-100">
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-sm font-medium text-center text-gray-500 mb-4">
-            Trusted by prestigious institutions
+          <h3 className="text-lg md:text-xl font-semibold text-center text-[#353337] mb-8">
+            Trusted by <span className="text-blue-600">prestigious institutions</span>
           </h3>
 
           <div className="relative w-full overflow-hidden">
