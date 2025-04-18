@@ -330,6 +330,118 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 bg-[#f7f7f8]">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#353337] mb-6">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-lg text-center text-[#353337] mb-12">
+            Get answers to common questions about MathGPT
+          </p>
+
+          <div className="space-y-4">
+            {/* FAQ Item 1 */}
+            <details className="group bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+              <summary className="flex items-center justify-between p-4 cursor-pointer list-none">
+                <h3 className="text-lg font-medium text-[#353337] group-hover:text-blue-600 transition-colors duration-200">
+                  How does MathGPT ensure academic integrity?
+                </h3>
+                <span className="ml-6 flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform duration-300">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="px-4 pb-4 text-[#353337] border-t border-gray-100 pt-4">
+                MathGPT uses advanced algorithms to generate unique problem variations for each student while maintaining the same learning objectives. Our system also includes features like browser lockdown for tests and real-time monitoring tools for instructors.
+              </div>
+            </details>
+
+            {/* FAQ Item 2 */}
+            <details className="group bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+              <summary className="flex items-center justify-between p-4 cursor-pointer list-none">
+                <h3 className="text-lg font-medium text-[#353337] group-hover:text-blue-600 transition-colors duration-200">
+                  Can MathGPT integrate with my existing LMS?
+                </h3>
+                <span className="ml-6 flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform duration-300">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="px-4 pb-4 text-[#353337] border-t border-gray-100 pt-4">
+                Yes! MathGPT is designed to work seamlessly with popular Learning Management Systems. We support LTI integration and can sync grades automatically with your existing gradebook.
+              </div>
+            </details>
+
+            {/* FAQ Item 3 */}
+            <details className="group bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+              <summary className="flex items-center justify-between p-4 cursor-pointer list-none">
+                <h3 className="text-lg font-medium text-[#353337] group-hover:text-blue-600 transition-colors duration-200">
+                  What subjects does MathGPT cover?
+                </h3>
+                <span className="ml-6 flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform duration-300">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="px-4 pb-4 text-[#353337] border-t border-gray-100 pt-4">
+                MathGPT covers a wide range of mathematics subjects including Algebra, Calculus, Statistics, Linear Algebra, and more. We're constantly expanding our content library based on instructor feedback.
+              </div>
+            </details>
+
+            {/* FAQ Item 4 */}
+            <details className="group bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+              <summary className="flex items-center justify-between p-4 cursor-pointer list-none">
+                <h3 className="text-lg font-medium text-[#353337] group-hover:text-blue-600 transition-colors duration-200">
+                  How does the AI tutoring work?
+                </h3>
+                <span className="ml-6 flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform duration-300">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="px-4 pb-4 text-[#353337] border-t border-gray-100 pt-4">
+                Our AI tutor provides step-by-step guidance, adapting to each student's learning style and pace. It uses natural language processing to understand questions and provides detailed explanations with visual aids when needed.
+              </div>
+            </details>
+
+            {/* FAQ Item 5 */}
+            <details className="group bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+              <summary className="flex items-center justify-between p-4 cursor-pointer list-none">
+                <h3 className="text-lg font-medium text-[#353337] group-hover:text-blue-600 transition-colors duration-200">
+                  What kind of support do you offer?
+                </h3>
+                <span className="ml-6 flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform duration-300">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="px-4 pb-4 text-[#353337] border-t border-gray-100 pt-4">
+                We provide 24/7 technical support, dedicated customer success managers for institutions, comprehensive documentation, and regular training sessions. Our team is always available to help you make the most of MathGPT.
+              </div>
+            </details>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-[#353337] mb-6">Still have questions?</p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-6 py-3 rounded-md bg-[#353337] text-white font-medium shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              Contact Us
+              <svg className="ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
