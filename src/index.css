@@ -1,0 +1,240 @@
+@import url('https://ext.same-assets.com/672282141/1528703646.woff2');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fff;
+  --foreground: #32303a;
+  --card: #fff;
+  --card-foreground: #32303a;
+  --popover: #fff;
+  --popover-foreground: #32303a;
+  --primary: #353337;
+  --primary-foreground: #fff;
+  --secondary: #e7e9ec;
+  --secondary-foreground: #2b2a33;
+  --muted: #8f604e;
+  --muted-foreground: #9b9fa1;
+  --accent: #60c5cb;
+  --accent-foreground: #32303a;
+  --destructive: #e83f3f;
+  --destructive-foreground: #fff;
+  --border: #cad2d3;
+  --input: #e5e7eb;
+  --ring: #af9062;
+  --radius: 0.625rem;
+  --mathgpt-highlight: #cda796;
+  --mathgpt-accent: #60c5cb;
+  --mathgpt-muted: #9b9fa1;
+  --mathgpt-gold: #af9062;
+  --mathgpt-partner: #cad2d3;
+
+  /* Modern UI base styles */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.03);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.05), 0 10px 10px -5px rgba(0,0,0,0.02);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0,0,0,0.04);
+  --shadow-outline: 0 0 0 3px rgba(96, 197, 203, 0.25);
+
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+html, body {
+  background: linear-gradient(180deg, var(--background) 0%, rgba(242, 242, 247, 0.8) 50%, var(--background) 100%) !important;
+  color: #32303a;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    /* Reset box-shadow and margins/padding for a clean base */
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+body::after {
+  content: 'cache-buster-2025-04-18-14:39';
+  display: none;
+}
+
+/* Updated Logo Scroll Animation */
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-logos {
+  animation: scroll-logos 30s linear infinite;
+  will-change: transform;
+}
+
+/* Modern animation behaviors */
+@media (prefers-reduced-motion: no-preference) {
+  /* Subtle fade up on scroll */
+  .fade-up-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-up-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Subtle scale on hover for interactive items */
+  .hover-scale {
+    transition: transform var(--transition-fast);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Interactive elements get modern transitions by default */
+a, button, input, textarea, select, details, summary {
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px; /* For fixed headers and anchor links */
+  }
+}
+
+/* Modern card styles reusable class */
+.modern-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+
+.modern-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Clean up scrollbars for modern browsers */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.2) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 20px;
+}
+
+/* Create visual section connectors */
+.section-connector {
+  position: relative;
+}
+
+.section-connector::after {
+  content: '';
+  position: absolute;
+  height: 120px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  left: 50%;
+  bottom: -80px;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 0.3;
+}
+
+/* Enhance image hover effects for flow */
+.image-flow {
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.image-flow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  opacity: 0;
+  border-radius: inherit;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.image-flow:hover::after {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-scroll-logos {
+    animation: none;
+  }
+}
+
+/* Additional styles for scrolling logos */
+.logos-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.logos-scroll {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.logos-scroll > div {
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.logos-scroll > div:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+  z-index: 10;
+}
