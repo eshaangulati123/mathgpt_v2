@@ -232,27 +232,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Original Partner Institutions Section - keeping as backup */}
-      <section className="py-16 px-4 bg-[#f7f7f8]">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-xl font-medium text-center text-[#353337] mb-10 animate-on-scroll">
-            Used and trusted by prestige institutions
-          </h3>
-
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center animate-on-scroll">
-            {logos.map((logo, index) => (
-              <div
-                key={logo.alt}
-                className="grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <img src={logo.src} alt={logo.alt} className="h-12 w-auto" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Features Comparison */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
