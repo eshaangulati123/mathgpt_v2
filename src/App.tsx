@@ -94,7 +94,7 @@ function Home() {
           </h3>
 
           <div className="relative w-full overflow-hidden">
-            {/* First set of logos */}
+            {/* Single continuous scrolling set of logos */}
             <div className="flex items-center space-x-12 animate-scroll-logos"
                  style={{
                    animationDuration: '30s',
@@ -104,24 +104,16 @@ function Home() {
               {logos.map((logo, index) => (
                 <div
                   key={`${logo.alt}-${index}`}
-                  className="flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
+                  className="flex-shrink-0 transition-all duration-300 hover:scale-105"
                 >
                   <img src={logo.src} alt={logo.alt} className="h-10 w-auto" />
                 </div>
               ))}
-            </div>
-
-            {/* Second set of logos for seamless infinite scroll */}
-            <div className="flex items-center space-x-12 animate-scroll-logos absolute top-0 left-full"
-                 style={{
-                   animationDuration: '30s',
-                   animationTimingFunction: 'linear',
-                   animationIterationCount: 'infinite'
-                 }}>
+              {/* Duplicate the logos for seamless scrolling */}
               {logos.map((logo, index) => (
                 <div
-                  key={`${logo.alt}-second-${index}`}
-                  className="flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
+                  key={`${logo.alt}-duplicate-${index}`}
+                  className="flex-shrink-0 transition-all duration-300 hover:scale-105"
                 >
                   <img src={logo.src} alt={logo.alt} className="h-10 w-auto" />
                 </div>
