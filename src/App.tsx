@@ -88,7 +88,7 @@ function Home() {
 
           <div className="relative w-full overflow-hidden">
             {/* Single continuous scrolling set of logos */}
-            <div className="flex items-center space-x-12 animate-scroll-logos"
+            <div className="flex items-center space-x-12 animate-scroll-logos bg-white/50 p-4 rounded-lg"
                  style={{
                    animationDuration: '30s',
                    animationTimingFunction: 'linear',
@@ -99,7 +99,7 @@ function Home() {
                   key={`${logo.alt}-${index}`}
                   className="flex-shrink-0 transition-all duration-300 hover:scale-105"
                 >
-                  <img src={logo.src} alt={logo.alt} className="h-10 w-auto" />
+                  <img src={logo.src} alt={logo.alt} className="h-16 w-auto min-w-[120px]" />
                 </div>
               ))}
               {/* Duplicate the logos for seamless scrolling */}
@@ -108,7 +108,7 @@ function Home() {
                   key={`${logo.alt}-duplicate-${index}`}
                   className="flex-shrink-0 transition-all duration-300 hover:scale-105"
                 >
-                  <img src={logo.src} alt={logo.alt} className="h-10 w-auto" />
+                  <img src={logo.src} alt={logo.alt} className="h-16 w-auto min-w-[120px]" />
                 </div>
               ))}
             </div>
