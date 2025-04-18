@@ -101,7 +101,7 @@ function Home() {
                    animationTimingFunction: 'linear',
                    animationIterationCount: 'infinite'
                  }}>
-              {logos.concat(logos).map((logo, index) => (
+              {logos.map((logo, index) => (
                 <div
                   key={`${logo.alt}-${index}`}
                   className="flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
@@ -111,15 +111,14 @@ function Home() {
               ))}
             </div>
 
-            {/* Create a second identical set of logos for smooth infinite scrolling */}
-            <div className="flex items-center space-x-12 animate-scroll-logos absolute top-0 left-0"
+            {/* Second set of logos for seamless infinite scroll */}
+            <div className="flex items-center space-x-12 animate-scroll-logos absolute top-0 left-full"
                  style={{
                    animationDuration: '30s',
                    animationTimingFunction: 'linear',
-                   animationIterationCount: 'infinite',
-                   animationDelay: '15s'
+                   animationIterationCount: 'infinite'
                  }}>
-              {logos.concat(logos).map((logo, index) => (
+              {logos.map((logo, index) => (
                 <div
                   key={`${logo.alt}-second-${index}`}
                   className="flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
