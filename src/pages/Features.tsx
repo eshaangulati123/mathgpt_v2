@@ -7,28 +7,32 @@ const Features = () => {
       {/* Why MathGPT Section */}
       <section className="bg-[#f7f7f8] py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#353337] mb-6">
-            Why MathGPT
-          </h1>
-          <p className="text-lg text-[#353337] max-w-2xl mb-8">
-            MathGPT is the first and only AI system that can reliably and accurately interpret and tutor STEM curriculum.
-          </p>
-          <ul className="space-y-3 mb-8 max-w-2xl">
-            <li className="flex items-start">
-              <span className="text-[#353337] mr-2">•</span>
-              <span>For instructors: MathGPT helps you scale while turbocharging your teaching capacity.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#353337] mr-2">•</span>
-              <span>For students: MathGPT helps you learn while never feeling left behind.</span>
-            </li>
-          </ul>
-          <div className="mt-6">
-            <img
-              src="https://ext.same-assets.com/3250228889/1417729087.png"
-              alt="MathGPT Interface"
-              className="w-full max-w-2xl h-auto rounded-lg shadow-md"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold text-[#353337] mb-6">
+                Why MathGPT
+              </h1>
+              <p className="text-lg text-[#353337] max-w-2xl mb-8">
+                MathGPT is the first and only AI system that can reliably and accurately interpret and tutor STEM curriculum.
+              </p>
+              <ul className="space-y-3 mb-8 max-w-2xl">
+                <li className="flex items-start">
+                  <span className="text-[#353337] mr-2">•</span>
+                  <span>For instructors: MathGPT helps you scale while turbocharging your teaching capacity.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#353337] mr-2">•</span>
+                  <span>For students: MathGPT helps you learn while never feeling left behind.</span>
+                </li>
+              </ul>
+            </div>
+            <div className="flex justify-center">
+              <img
+                src="https://ext.same-assets.com/3250228889/1417729087.png"
+                alt="MathGPT Interface"
+                className="w-full max-w-2xl h-auto rounded-lg shadow-md"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -259,17 +263,28 @@ const Features = () => {
           <h2 className="text-3xl font-bold text-center text-[#353337] mb-8">
             Our Technology
           </h2>
-          <ul className="space-y-4 list-disc pl-6">
-            <li className="text-[#353337]">
-              <span className="font-medium">Comprehensive, domain-aware AI</span> - Designed to adapt and scale with the needs and priorities of the learning environment.
-            </li>
-            <li className="text-[#353337]">
-              <span className="font-medium">Utilizes proprietary methods and neural networks</span> - For highly accurate computations.
-            </li>
-            <li className="text-[#353337]">
-              <span className="font-medium">Deep, contextualized instructional material</span> - For precise and effective solutions.
-            </li>
-          </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+              <ul className="space-y-4 list-disc pl-6">
+                <li className="text-[#353337]">
+                  <span className="font-medium">Comprehensive, domain-aware AI</span> - Designed to adapt and scale with the needs and priorities of the learning environment.
+                </li>
+                <li className="text-[#353337]">
+                  <span className="font-medium">Utilizes proprietary methods and neural networks</span> - For highly accurate computations.
+                </li>
+                <li className="text-[#353337]">
+                  <span className="font-medium">Deep, contextualized instructional material</span> - For precise and effective solutions.
+                </li>
+              </ul>
+            </div>
+            <div className="flex justify-center">
+              <img
+                src="https://media.mathgpt.ai/wp/2024/10/10082108/illustration-1-1.png"
+                alt="Technology Illustration"
+                className="max-w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </div>
