@@ -81,36 +81,42 @@ function Home() {
 
       {/* Scrolling Logo Bar - right after hero */}
       <section className="py-10 overflow-hidden bg-white border-y border-gray-100">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4">
           <h3 className="text-lg md:text-xl font-semibold text-center text-[#353337] mb-8">
             Trusted by <span className="text-blue-600">prestigious institutions</span>
           </h3>
 
           <div className="relative w-full overflow-hidden">
-            {/* Single continuous scrolling set of logos */}
-            <div className="flex items-center space-x-12 animate-scroll-logos bg-white/50 p-4 rounded-lg"
-                 style={{
-                   animationDuration: '30s',
-                   animationTimingFunction: 'linear',
-                   animationIterationCount: 'infinite'
-                 }}>
-              {logos.map((logo, index) => (
-                <div
-                  key={`${logo.alt}-${index}`}
-                  className="flex-shrink-0 transition-all duration-300 hover:scale-105"
-                >
-                  <img src={logo.src} alt={logo.alt} className="h-16 w-auto min-w-[120px]" />
-                </div>
-              ))}
-              {/* Duplicate the logos for seamless scrolling */}
-              {logos.map((logo, index) => (
-                <div
-                  key={`${logo.alt}-duplicate-${index}`}
-                  className="flex-shrink-0 transition-all duration-300 hover:scale-105"
-                >
-                  <img src={logo.src} alt={logo.alt} className="h-16 w-auto min-w-[120px]" />
-                </div>
-              ))}
+            <div className="logos-container">
+              <div className="logos-scroll animate-scroll-logos">
+                {logos.map((logo, index) => (
+                  <div
+                    key={`${logo.alt}-${index}`}
+                    className="logo-item"
+                  >
+                    <img 
+                      src={logo.src} 
+                      alt={logo.alt} 
+                      className="h-16 w-auto object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+                {/* Duplicate logos for seamless scrolling */}
+                {logos.map((logo, index) => (
+                  <div
+                    key={`${logo.alt}-duplicate-${index}`}
+                    className="logo-item"
+                  >
+                    <img 
+                      src={logo.src} 
+                      alt={logo.alt} 
+                      className="h-16 w-auto object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
