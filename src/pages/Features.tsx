@@ -10,11 +10,17 @@ const Features = () => {
   };
 
   const staggerChildren = {
+    initial: {},
     animate: {
       transition: {
         staggerChildren: 0.2
       }
     }
+  };
+
+  const viewportOptions = {
+    once: true,
+    margin: "-100px"
   };
 
   return (
@@ -109,12 +115,13 @@ const Features = () => {
           className="max-w-7xl mx-auto"
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true }}
+          viewport={viewportOptions}
           variants={staggerChildren}
         >
           <motion.h2 
             className="text-3xl font-bold text-center text-[#353337] mb-12"
             variants={fadeInUp}
+            viewport={viewportOptions}
           >
             Benefits
           </motion.h2>
@@ -123,6 +130,7 @@ const Features = () => {
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
             variants={fadeInUp}
+            viewport={viewportOptions}
           >
             <motion.div 
               className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
@@ -139,18 +147,21 @@ const Features = () => {
               <motion.h3 
                 className="text-2xl font-bold text-[#353337] mb-3"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 Student Success
               </motion.h3>
               <motion.p 
                 className="text-[#353337] mb-4"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 MathGPT's Generative AI provides accurate, personalized tutoring that coaches students through their math challenges to foster real learning.
               </motion.p>
               <motion.ul 
                 className="space-y-3"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 <li className="flex items-start">
                   <span className="text-[#353337] mr-2">•</span>
@@ -168,6 +179,7 @@ const Features = () => {
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
             variants={fadeInUp}
+            viewport={viewportOptions}
           >
             <motion.div 
               className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
@@ -184,18 +196,21 @@ const Features = () => {
               <motion.h3 
                 className="text-2xl font-bold text-[#353337] mb-3"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 Institutional Success
               </motion.h3>
               <motion.p 
                 className="text-[#353337] mb-4"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 Schools achieve metrics that matter: increased course completion rates, student satisfaction, and career success for entire student cohorts.
               </motion.p>
               <motion.ul 
                 className="space-y-3"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 <li className="flex items-start">
                   <span className="text-[#353337] mr-2">•</span>
@@ -213,6 +228,7 @@ const Features = () => {
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
             variants={fadeInUp}
+            viewport={viewportOptions}
           >
             <motion.div 
               className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
@@ -229,18 +245,21 @@ const Features = () => {
               <motion.h3 
                 className="text-2xl font-bold text-[#353337] mb-3"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 Effortless Integration
               </motion.h3>
               <motion.p 
                 className="text-[#353337] mb-4"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 MathGPT fits easily and seamlessly into existing institutional systems, course designs, and materials. It's also fully functional as a standalone solution, or as a complement to an existing LMS.
               </motion.p>
               <motion.ul 
                 className="space-y-3"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 <li className="flex items-start">
                   <span className="text-[#353337] mr-2">•</span>
@@ -258,6 +277,7 @@ const Features = () => {
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
             variants={fadeInUp}
+            viewport={viewportOptions}
           >
             <motion.div 
               className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
@@ -274,18 +294,21 @@ const Features = () => {
               <motion.h3 
                 className="text-2xl font-bold text-[#353337] mb-3"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 Complete Control
               </motion.h3>
               <motion.p 
                 className="text-[#353337] mb-4"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 Instructors trust MathGPT to maintain full oversight using analytics-based dashboards, whether used for a single assignment or a complete course.
               </motion.p>
               <motion.ul 
                 className="space-y-3"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 <li className="flex items-start">
                   <span className="text-[#353337] mr-2">•</span>
@@ -303,6 +326,7 @@ const Features = () => {
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
             variants={fadeInUp}
+            viewport={viewportOptions}
           >
             <motion.div 
               className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
@@ -319,18 +343,21 @@ const Features = () => {
               <motion.h3 
                 className="text-2xl font-bold text-[#353337] mb-3"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 Affordable
               </motion.h3>
               <motion.p 
                 className="text-[#353337] mb-4"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 MathGPT will always offer a zero-cost OER-friendly option, including hopefully, to support students and instructors. Expanded capabilities are available at nominal cost per student.
               </motion.p>
               <motion.ul 
                 className="space-y-3"
                 variants={fadeInUp}
+                viewport={viewportOptions}
               >
                 <li className="flex items-start">
                   <span className="text-[#353337] mr-2">•</span>
