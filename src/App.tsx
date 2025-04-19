@@ -434,16 +434,16 @@ function Home() {
 
 // Helper data
 const logos = [
-  { src: "https://ext.same-assets.com/600722722/355611129.png", alt: "Institution logo 1" },
-  { src: "https://ext.same-assets.com/600722722/3890034039.png", alt: "Institution logo 2" },
-  { src: "https://ext.same-assets.com/600722722/1421359194.png", alt: "Institution logo 3" },
-  { src: "https://ext.same-assets.com/600722722/3109909551.png", alt: "Institution logo 4" },
-  { src: "https://ext.same-assets.com/600722722/4290189750.png", alt: "Institution logo 5" },
-  { src: "https://ext.same-assets.com/600722722/2610703635.png", alt: "Institution logo 6" },
-  { src: "https://media.mathgpt.ai/wp/2024/10/10034921/Logo-19.png", alt: "Institution logo 7" },
-  { src: "https://media.mathgpt.ai/wp/2024/10/10035010/Logo-17.png", alt: "Institution logo 8" },
-  { src: "https://media.mathgpt.ai/wp/2024/10/10035118/Logo-18.png", alt: "Institution logo 9" },
-  { src: "https://media.mathgpt.ai/wp/2024/10/10034717/Logo-8.png", alt: "Institution logo 10" },
+  { src: "https://media.mathgpt.ai/wp/2024/10/10034622/Logo-4.png", alt: "Institution logo 1" },
+  { src: "https://media.mathgpt.ai/wp/2024/10/10035226/Logo-24.png", alt: "Institution logo 2" },
+  { src: "https://media.mathgpt.ai/wp/2024/10/10034641/Logo-8.png", alt: "Institution logo 3" },
+  { src: "https://media.mathgpt.ai/wp/2024/10/10034637/Logo-7.png", alt: "Institution logo 4" },
+  { src: "https://media.mathgpt.ai/wp/2024/10/10035240/Logo-26.png", alt: "Institution logo 5" },
+  { src: "https://media.mathgpt.ai/wp/2024/10/10035216/Logo-23.png", alt: "Institution logo 6" },
+  { src: "https://media.mathgpt.ai/wp/2024/10/10034903/Logo-15.png", alt: "Institution logo 7" },
+  { src: "https://media.mathgpt.ai/wp/2024/10/10034626/Logo-5.png", alt: "Institution logo 8" },
+  { src: "https://media.mathgpt.ai/wp/2024/10/10034936/Logo-20.png", alt: "Institution logo 9" },
+  { src: "https://media.mathgpt.ai/wp/2024/10/10034616/Logo-3.png", alt: "Institution logo 10" }
 ];
 
 export default Home;
