@@ -1,7 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Features = () => {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  };
+
+  const staggerChildren = {
+    animate: {
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
   return (
     <div className="w-full">
       {/* Why MathGPT Section */}
@@ -90,28 +105,53 @@ const Features = () => {
 
       {/* Benefits Sections */}
       <section className="py-16 px-4 bg-[#f7f7f8]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-[#353337] mb-12">
+        <motion.div 
+          className="max-w-7xl mx-auto"
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={staggerChildren}
+        >
+          <motion.h2 
+            className="text-3xl font-bold text-center text-[#353337] mb-12"
+            variants={fadeInUp}
+          >
             Benefits
-          </h2>
+          </motion.h2>
 
           {/* Student Success */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-            <div className="flex justify-center">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
+            variants={fadeInUp}
+          >
+            <motion.div 
+              className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
+              whileHover={{ rotate: [0, -5, 5, -5, 0] }}
+              transition={{ duration: 0.5 }}
+            >
               <img
                 src="https://ext.same-assets.com/3250228889/710266577.png"
                 alt="Student Success"
                 className="h-40 w-auto"
               />
-            </div>
+            </motion.div>
             <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold text-[#353337] mb-3">
+              <motion.h3 
+                className="text-2xl font-bold text-[#353337] mb-3"
+                variants={fadeInUp}
+              >
                 Student Success
-              </h3>
-              <p className="text-[#353337] mb-4">
+              </motion.h3>
+              <motion.p 
+                className="text-[#353337] mb-4"
+                variants={fadeInUp}
+              >
                 MathGPT's Generative AI provides accurate, personalized tutoring that coaches students through their math challenges to foster real learning.
-              </p>
-              <ul className="space-y-3">
+              </motion.p>
+              <motion.ul 
+                className="space-y-3"
+                variants={fadeInUp}
+              >
                 <li className="flex items-start">
                   <span className="text-[#353337] mr-2">•</span>
                   <span>Foundational learning using AI-generated practice problems, interactive videos, reflective learning, all leading to better student outcomes.</span>
@@ -120,27 +160,43 @@ const Features = () => {
                   <span className="text-[#353337] mr-2">•</span>
                   <span>AI Tutor is infinitely patient and available to students 24/7.</span>
                 </li>
-              </ul>
+              </motion.ul>
             </div>
-          </div>
+          </motion.div>
 
           {/* Institutional Success */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-            <div className="flex justify-center">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
+            variants={fadeInUp}
+          >
+            <motion.div 
+              className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
+              whileHover={{ rotate: [0, -5, 5, -5, 0] }}
+              transition={{ duration: 0.5 }}
+            >
               <img
                 src="https://ext.same-assets.com/3250228889/965203637.png"
                 alt="Institutional Success"
                 className="h-40 w-auto"
               />
-            </div>
+            </motion.div>
             <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold text-[#353337] mb-3">
+              <motion.h3 
+                className="text-2xl font-bold text-[#353337] mb-3"
+                variants={fadeInUp}
+              >
                 Institutional Success
-              </h3>
-              <p className="text-[#353337] mb-4">
+              </motion.h3>
+              <motion.p 
+                className="text-[#353337] mb-4"
+                variants={fadeInUp}
+              >
                 Schools achieve metrics that matter: increased course completion rates, student satisfaction, and career success for entire student cohorts.
-              </p>
-              <ul className="space-y-3">
+              </motion.p>
+              <motion.ul 
+                className="space-y-3"
+                variants={fadeInUp}
+              >
                 <li className="flex items-start">
                   <span className="text-[#353337] mr-2">•</span>
                   <span>Collaborative community sharing to inspire and exchange new teaching strategies.</span>
@@ -149,27 +205,43 @@ const Features = () => {
                   <span className="text-[#353337] mr-2">•</span>
                   <span>Tailored institutional accounts for enhanced visibility.</span>
                 </li>
-              </ul>
+              </motion.ul>
             </div>
-          </div>
+          </motion.div>
 
           {/* Effortless Integration */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-            <div className="flex justify-center">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
+            variants={fadeInUp}
+          >
+            <motion.div 
+              className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
+              whileHover={{ rotate: [0, -5, 5, -5, 0] }}
+              transition={{ duration: 0.5 }}
+            >
               <img
                 src="https://ext.same-assets.com/3250228889/3860528601.png"
                 alt="Effortless Integration"
                 className="h-40 w-auto"
               />
-            </div>
+            </motion.div>
             <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold text-[#353337] mb-3">
+              <motion.h3 
+                className="text-2xl font-bold text-[#353337] mb-3"
+                variants={fadeInUp}
+              >
                 Effortless Integration
-              </h3>
-              <p className="text-[#353337] mb-4">
+              </motion.h3>
+              <motion.p 
+                className="text-[#353337] mb-4"
+                variants={fadeInUp}
+              >
                 MathGPT fits easily and seamlessly into existing institutional systems, course designs, and materials. It's also fully functional as a standalone solution, or as a complement to an existing LMS.
-              </p>
-              <ul className="space-y-3">
+              </motion.p>
+              <motion.ul 
+                className="space-y-3"
+                variants={fadeInUp}
+              >
                 <li className="flex items-start">
                   <span className="text-[#353337] mr-2">•</span>
                   <span>Easily available through college bookstores, including access code distribution.</span>
@@ -178,27 +250,43 @@ const Features = () => {
                   <span className="text-[#353337] mr-2">•</span>
                   <span>Fully compatible with MyOpenMath.</span>
                 </li>
-              </ul>
+              </motion.ul>
             </div>
-          </div>
+          </motion.div>
 
           {/* Complete Control */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-            <div className="flex justify-center">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
+            variants={fadeInUp}
+          >
+            <motion.div 
+              className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
+              whileHover={{ rotate: [0, -5, 5, -5, 0] }}
+              transition={{ duration: 0.5 }}
+            >
               <img
                 src="https://ext.same-assets.com/3250228889/3701680159.png"
                 alt="Complete Control"
                 className="h-40 w-auto"
               />
-            </div>
+            </motion.div>
             <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold text-[#353337] mb-3">
+              <motion.h3 
+                className="text-2xl font-bold text-[#353337] mb-3"
+                variants={fadeInUp}
+              >
                 Complete Control
-              </h3>
-              <p className="text-[#353337] mb-4">
+              </motion.h3>
+              <motion.p 
+                className="text-[#353337] mb-4"
+                variants={fadeInUp}
+              >
                 Instructors trust MathGPT to maintain full oversight using analytics-based dashboards, whether used for a single assignment or a complete course.
-              </p>
-              <ul className="space-y-3">
+              </motion.p>
+              <motion.ul 
+                className="space-y-3"
+                variants={fadeInUp}
+              >
                 <li className="flex items-start">
                   <span className="text-[#353337] mr-2">•</span>
                   <span>Browser lock down for tests & quizzes.</span>
@@ -207,27 +295,43 @@ const Features = () => {
                   <span className="text-[#353337] mr-2">•</span>
                   <span>Customizable gradebook with automatic syncing.</span>
                 </li>
-              </ul>
+              </motion.ul>
             </div>
-          </div>
+          </motion.div>
 
           {/* Affordable */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-            <div className="flex justify-center">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
+            variants={fadeInUp}
+          >
+            <motion.div 
+              className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
+              whileHover={{ rotate: [0, -5, 5, -5, 0] }}
+              transition={{ duration: 0.5 }}
+            >
               <img
                 src="https://ext.same-assets.com/3250228889/2018117347.png"
                 alt="Affordable"
                 className="h-40 w-auto"
               />
-            </div>
+            </motion.div>
             <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold text-[#353337] mb-3">
+              <motion.h3 
+                className="text-2xl font-bold text-[#353337] mb-3"
+                variants={fadeInUp}
+              >
                 Affordable
-              </h3>
-              <p className="text-[#353337] mb-4">
+              </motion.h3>
+              <motion.p 
+                className="text-[#353337] mb-4"
+                variants={fadeInUp}
+              >
                 MathGPT will always offer a zero-cost OER-friendly option, including hopefully, to support students and instructors. Expanded capabilities are available at nominal cost per student.
-              </p>
-              <ul className="space-y-3">
+              </motion.p>
+              <motion.ul 
+                className="space-y-3"
+                variants={fadeInUp}
+              >
                 <li className="flex items-start">
                   <span className="text-[#353337] mr-2">•</span>
                   <span>Essentials and Advanced plans available.</span>
@@ -236,10 +340,10 @@ const Features = () => {
                   <span className="text-[#353337] mr-2">•</span>
                   <span>Institutional pricing available by request.</span>
                 </li>
-              </ul>
+              </motion.ul>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Compliance Section */}
