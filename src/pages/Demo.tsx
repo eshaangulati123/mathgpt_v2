@@ -17,7 +17,7 @@ const Demo = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-red-900 via-purple-900 to-blue-900">
+      <section className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
         <div className="absolute inset-0 bg-grid-white/[0.05] -z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 -z-10"></div>
         <div className="container px-4 md:px-6 max-w-4xl mx-auto text-center">
@@ -30,7 +30,7 @@ const Demo = () => {
               <Sparkles className="mr-2 h-4 w-4" />
               Interactive Demo
             </div>
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-white mb-6">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-yellow-400 to-green-400">
               Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">MathGPT</span> Live
             </h1>
             <p className="text-xl/relaxed text-white/90 mb-8 max-w-2xl mx-auto">
