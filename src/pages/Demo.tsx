@@ -74,8 +74,8 @@ const Demo = () => {
                 viewport={viewportOptions}
               >
                 <stat.icon className="w-12 h-12 mx-auto mb-4 text-indigo-600" />
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-2">{stat.value}</div>
+                <div className="text-sm font-medium text-indigo-600">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -95,7 +95,7 @@ const Demo = () => {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 mb-6">
               Try It Yourself
             </h2>
-            <p className="text-xl/relaxed text-gray-600">
+            <p className="text-xl/relaxed text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
               Enter any math problem and see how MathGPT solves it step by step.
             </p>
           </motion.div>
@@ -112,11 +112,11 @@ const Demo = () => {
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
                     <Terminal className="w-5 h-5 text-indigo-600" />
-                    <h3 className="font-semibold text-gray-900">Problem Solver</h3>
+                    <h3 className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Problem Solver</h3>
                   </div>
                   <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-4 rounded-lg">
                     <textarea 
-                      className="w-full bg-transparent border-none focus:ring-0 text-gray-600 placeholder-gray-400 resize-none"
+                      className="w-full bg-transparent border-none focus:ring-0 text-indigo-600 placeholder-indigo-400 resize-none"
                       placeholder="Enter your math problem here..."
                       rows={4}
                     />
@@ -140,25 +140,25 @@ const Demo = () => {
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
                     <Calculator className="w-5 h-5 text-indigo-600" />
-                    <h3 className="font-semibold text-gray-900">Step-by-Step Solution</h3>
+                    <h3 className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Step-by-Step Solution</h3>
                   </div>
                   <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-4 rounded-lg min-h-[200px]">
                     <div className="space-y-3">
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full bg-indigo-600"></div>
-                        <p className="text-gray-600">Step 1: Analyze the problem</p>
+                        <p className="text-indigo-600">Step 1: Analyze the problem</p>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full bg-indigo-600"></div>
-                        <p className="text-gray-600">Step 2: Apply relevant formulas</p>
+                        <p className="text-indigo-600">Step 2: Apply relevant formulas</p>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full bg-indigo-600"></div>
-                        <p className="text-gray-600">Step 3: Solve step by step</p>
+                        <p className="text-indigo-600">Step 3: Solve step by step</p>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full bg-indigo-600"></div>
-                        <p className="text-gray-600">Step 4: Verify the solution</p>
+                        <p className="text-indigo-600">Step 4: Verify the solution</p>
                       </div>
                     </div>
                   </div>
@@ -182,7 +182,7 @@ const Demo = () => {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 mb-6">
               How It Works
             </h2>
-            <p className="text-xl/relaxed text-gray-600">
+            <p className="text-xl/relaxed text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
               See MathGPT in action with these real-world examples.
             </p>
           </motion.div>
@@ -221,16 +221,16 @@ const Demo = () => {
                 <div className="absolute -inset-1 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                 <div className="relative bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
                   <feature.icon className="w-12 h-12 text-indigo-600 mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-2">{feature.title}</h3>
+                  <p className="text-indigo-600 mb-4">{feature.description}</p>
                   <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-3 rounded-lg mb-4">
-                    <p className="text-sm text-gray-600 font-mono">{feature.example}</p>
+                    <p className="text-sm font-mono text-indigo-600">{feature.example}</p>
                   </div>
                   <div className="space-y-2">
                     {feature.steps.map((step, i) => (
                       <div key={i} className="flex items-center gap-2">
                         <ChevronRight className="w-4 h-4 text-indigo-600" />
-                        <p className="text-sm text-gray-600">{step}</p>
+                        <p className="text-sm text-indigo-600">{step}</p>
                       </div>
                     ))}
                   </div>
@@ -276,10 +276,10 @@ const Demo = () => {
             transition={{ duration: 0.6 }}
             viewport={viewportOptions}
           >
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-white mb-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-6">
               Ready to Try MathGPT?
             </h2>
-            <p className="text-xl text-white/80 mb-8">
+            <p className="text-xl text-white/90 mb-8">
               Experience the future of math education with our AI-powered tutor.
             </p>
             <div className="flex justify-center gap-4">
