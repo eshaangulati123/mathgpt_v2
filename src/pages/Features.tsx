@@ -1,6 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import {
+  Check,
+  Zap,
+  Shield,
+  BarChart,
+  Users,
+  Globe,
+  Sparkles,
+  ArrowRight,
+  Star,
+  ChevronRight,
+  Layers,
+  Code,
+  Cpu,
+  Database,
+  LineChart,
+  Settings,
+  Workflow,
+  MessageSquare,
+  Award,
+  Lightbulb,
+} from 'lucide-react';
 
 const Features = () => {
   const fadeInUp = {
@@ -24,400 +46,251 @@ const Features = () => {
   };
 
   return (
-    <div className="w-full">
-      {/* Why MathGPT Section */}
-      <section className="bg-[#f7f7f8] py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-[#353337] mb-6">
+    <div className="flex min-h-screen flex-col bg-white">
+      {/* Decorative elements */}
+      <div className="fixed inset-0 pointer-events-none">
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
+        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-black/5 rounded-full blur-3xl -z-10"></div>
+        <div className="absolute top-3/4 left-1/2 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -z-10"></div>
+      </div>
+
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid-black/[0.02] -z-10"></div>
+          <div className="container px-4 md:px-6 relative">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="inline-flex items-center rounded-lg bg-blue-500/10 px-3 py-1 text-sm text-blue-600">
+                <Sparkles className="mr-2 h-4 w-4" />
                 Why MathGPT
+              </div>
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-black via-blue-600 to-black">
+                The Future of Math Education
               </h1>
-              <p className="text-lg text-[#353337] max-w-2xl mb-8">
+              <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed">
                 MathGPT is the first and only AI system that can reliably and accurately interpret and tutor STEM curriculum.
               </p>
-              <ul className="space-y-3 mb-8 max-w-2xl">
-                <li className="flex items-start">
-                  <span className="text-[#353337] mr-2">•</span>
-                  <span>For instructors: MathGPT helps you scale while turbocharging your teaching capacity.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#353337] mr-2">•</span>
-                  <span>For students: MathGPT helps you learn while never feeling left behind.</span>
-                </li>
-              </ul>
-            </div>
-            <div className="flex justify-center">
-              <img
-                src="https://ext.same-assets.com/3250228889/1417729087.png"
-                alt="MathGPT Interface"
-                className="w-full max-w-2xl h-auto rounded-lg shadow-md"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-center text-[#353337] mb-12">
-            Features
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* AI Tutor */}
-            <div className="flex flex-col">
-              <div className="h-64 bg-[#f7f7f8] rounded-lg mb-6 overflow-hidden">
-                <img
-                  src="https://ext.same-assets.com/3250228889/1045501045.png"
-                  alt="AI Tutor Interface"
-                  className="w-full h-full object-cover"
-                />
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                <Link to="/signup" className="inline-flex items-center justify-center rounded-md bg-blue-600 px-8 py-3 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700">
+                  Get Started
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                <Link to="/demo" className="inline-flex items-center justify-center rounded-md border border-gray-200 bg-white px-8 py-3 text-sm font-medium shadow-sm transition-colors hover:bg-gray-50">
+                  Watch Demo
+                </Link>
               </div>
-              <h3 className="text-2xl font-bold text-[#353337] mb-3">
-                AI Tutor
-              </h3>
-              <p className="text-[#353337] mb-4">
-                MathGPT includes an accurate, conversational experience AI Tutor that coaches students through math problems by prompting, guiding, and encouraging students on their learning journey.
-              </p>
-              <p className="text-[#353337]">
-                Rather than simply giving answers, the Tutor asks students thought-provoking questions alongside the material, deepening their understanding of key concepts. This empowers instructors to support every student with limitless personalized tutoring.
-              </p>
             </div>
+          </div>
+        </section>
 
-            {/* Course & Assignment Manager */}
-            <div className="flex flex-col">
-              <div className="h-64 bg-[#f7f7f8] rounded-lg mb-6 overflow-hidden">
-                <img
-                  src="https://ext.same-assets.com/3250228889/1821207086.png"
-                  alt="Course & Assignment Manager"
-                  className="w-full h-full object-cover"
-                />
+        {/* Core Features Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50/50 relative">
+          <div className="absolute inset-0 bg-grid-black/[0.02] -z-10"></div>
+          <div className="container px-4 md:px-6">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center rounded-lg bg-blue-500/10 px-3 py-1 text-sm mb-4 text-blue-600">
+                <Sparkles className="mr-2 h-4 w-4" />
+                Core Features
               </div>
-              <h3 className="text-2xl font-bold text-[#353337] mb-3">
-                Course & Assignment Manager
-              </h3>
-              <p className="text-[#353337] mb-4">
-                MathGPT accelerates an instructor's course development with a simple content management platform that helps them build dynamic course materials such as access to a growing library of vetted and customizable courses. The system creates unique, cheat-proof formative assessments for each student automatically.
-              </p>
-              <p className="text-[#353337]">
-                Regardless of course, all course content and assignments are enhanced by MathGPT's AI Tutor, providing a seamless learning experience for every student.
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-black via-blue-600 to-black">
+                Powerful Tools for Modern Education
+              </h2>
+              <p className="max-w-[600px] mx-auto mt-4 text-gray-600 md:text-xl/relaxed">
+                Everything you need to enhance math education and boost student success
               </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Benefits Sections */}
-      <section className="py-16 px-4 bg-[#f7f7f8]">
-        <motion.div 
-          className="max-w-7xl mx-auto"
-          initial="initial"
-          whileInView="animate"
-          viewport={viewportOptions}
-          variants={staggerChildren}
-        >
-          <motion.h2 
-            className="text-3xl font-bold text-center text-[#353337] mb-12"
-            variants={fadeInUp}
-            viewport={viewportOptions}
-          >
-            Benefits
-          </motion.h2>
+            <div className="grid gap-12 lg:gap-24">
+              {/* AI Tutor Feature */}
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="order-2 md:order-1">
+                  <div className="inline-flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-3 mb-4">
+                    <Zap className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-black">AI Tutor</h3>
+                  <p className="text-gray-600 mb-6">
+                    MathGPT includes an accurate, conversational experience AI Tutor that coaches students through math problems by prompting, guiding, and encouraging students on their learning journey.
+                  </p>
+                  <ul className="grid gap-3">
+                    {[
+                      "24/7 personalized tutoring",
+                      "Thought-provoking questions",
+                      "Deep conceptual understanding",
+                      "Real-time feedback",
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-center gap-3">
+                        <div className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-500/10">
+                          <Check className="h-3.5 w-3.5 text-blue-600" />
+                        </div>
+                        <span className="text-gray-600">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="order-1 md:order-2 relative">
+                  <div className="absolute -inset-4 bg-gradient-to-br from-blue-500/5 to-blue-600/5 rounded-2xl blur-lg -z-10"></div>
+                  <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-1">
+                    <img
+                      src="https://ext.same-assets.com/3250228889/1045501045.png"
+                      alt="AI Tutor Interface"
+                      className="rounded-xl overflow-hidden aspect-video object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
 
-          {/* Student Success */}
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
-            variants={fadeInUp}
-            viewport={viewportOptions}
-          >
-            <motion.div 
-              className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
-              whileHover={{ rotate: [0, -5, 5, -5, 0] }}
-              transition={{ duration: 0.5 }}
-            >
-              <img
-                src="https://ext.same-assets.com/3250228889/710266577.png"
-                alt="Student Success"
-                className="h-40 w-auto"
-              />
-            </motion.div>
-            <div className="md:col-span-2">
-              <motion.h3 
-                className="text-2xl font-bold text-[#353337] mb-3"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                Student Success
-              </motion.h3>
-              <motion.p 
-                className="text-[#353337] mb-4"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                MathGPT's Generative AI provides accurate, personalized tutoring that coaches students through their math challenges to foster real learning.
-              </motion.p>
-              <motion.ul 
-                className="space-y-3"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                <li className="flex items-start">
-                  <span className="text-[#353337] mr-2">•</span>
-                  <span>Foundational learning using AI-generated practice problems, interactive videos, reflective learning, all leading to better student outcomes.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#353337] mr-2">•</span>
-                  <span>AI Tutor is infinitely patient and available to students 24/7.</span>
-                </li>
-              </motion.ul>
-            </div>
-          </motion.div>
-
-          {/* Institutional Success */}
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
-            variants={fadeInUp}
-            viewport={viewportOptions}
-          >
-            <motion.div 
-              className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
-              whileHover={{ rotate: [0, -5, 5, -5, 0] }}
-              transition={{ duration: 0.5 }}
-            >
-              <img
-                src="https://ext.same-assets.com/3250228889/965203637.png"
-                alt="Institutional Success"
-                className="h-40 w-auto"
-              />
-            </motion.div>
-            <div className="md:col-span-2">
-              <motion.h3 
-                className="text-2xl font-bold text-[#353337] mb-3"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                Institutional Success
-              </motion.h3>
-              <motion.p 
-                className="text-[#353337] mb-4"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                Schools achieve metrics that matter: increased course completion rates, student satisfaction, and career success for entire student cohorts.
-              </motion.p>
-              <motion.ul 
-                className="space-y-3"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                <li className="flex items-start">
-                  <span className="text-[#353337] mr-2">•</span>
-                  <span>Collaborative community sharing to inspire and exchange new teaching strategies.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#353337] mr-2">•</span>
-                  <span>Tailored institutional accounts for enhanced visibility.</span>
-                </li>
-              </motion.ul>
-            </div>
-          </motion.div>
-
-          {/* Effortless Integration */}
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
-            variants={fadeInUp}
-            viewport={viewportOptions}
-          >
-            <motion.div 
-              className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
-              whileHover={{ rotate: [0, -5, 5, -5, 0] }}
-              transition={{ duration: 0.5 }}
-            >
-              <img
-                src="https://ext.same-assets.com/3250228889/3860528601.png"
-                alt="Effortless Integration"
-                className="h-40 w-auto"
-              />
-            </motion.div>
-            <div className="md:col-span-2">
-              <motion.h3 
-                className="text-2xl font-bold text-[#353337] mb-3"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                Effortless Integration
-              </motion.h3>
-              <motion.p 
-                className="text-[#353337] mb-4"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                MathGPT fits easily and seamlessly into existing institutional systems, course designs, and materials. It's also fully functional as a standalone solution, or as a complement to an existing LMS.
-              </motion.p>
-              <motion.ul 
-                className="space-y-3"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                <li className="flex items-start">
-                  <span className="text-[#353337] mr-2">•</span>
-                  <span>Easily available through college bookstores, including access code distribution.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#353337] mr-2">•</span>
-                  <span>Fully compatible with MyOpenMath.</span>
-                </li>
-              </motion.ul>
-            </div>
-          </motion.div>
-
-          {/* Complete Control */}
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
-            variants={fadeInUp}
-            viewport={viewportOptions}
-          >
-            <motion.div 
-              className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
-              whileHover={{ rotate: [0, -5, 5, -5, 0] }}
-              transition={{ duration: 0.5 }}
-            >
-              <img
-                src="https://ext.same-assets.com/3250228889/3701680159.png"
-                alt="Complete Control"
-                className="h-40 w-auto"
-              />
-            </motion.div>
-            <div className="md:col-span-2">
-              <motion.h3 
-                className="text-2xl font-bold text-[#353337] mb-3"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                Complete Control
-              </motion.h3>
-              <motion.p 
-                className="text-[#353337] mb-4"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                Instructors trust MathGPT to maintain full oversight using analytics-based dashboards, whether used for a single assignment or a complete course.
-              </motion.p>
-              <motion.ul 
-                className="space-y-3"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                <li className="flex items-start">
-                  <span className="text-[#353337] mr-2">•</span>
-                  <span>Browser lock down for tests & quizzes.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#353337] mr-2">•</span>
-                  <span>Customizable gradebook with automatic syncing.</span>
-                </li>
-              </motion.ul>
-            </div>
-          </motion.div>
-
-          {/* Affordable */}
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 group hover:bg-white hover:shadow-xl rounded-xl p-8 transition-all duration-300"
-            variants={fadeInUp}
-            viewport={viewportOptions}
-          >
-            <motion.div 
-              className="flex justify-center transform group-hover:scale-110 transition-transform duration-300"
-              whileHover={{ rotate: [0, -5, 5, -5, 0] }}
-              transition={{ duration: 0.5 }}
-            >
-              <img
-                src="https://ext.same-assets.com/3250228889/2018117347.png"
-                alt="Affordable"
-                className="h-40 w-auto"
-              />
-            </motion.div>
-            <div className="md:col-span-2">
-              <motion.h3 
-                className="text-2xl font-bold text-[#353337] mb-3"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                Affordable
-              </motion.h3>
-              <motion.p 
-                className="text-[#353337] mb-4"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                MathGPT will always offer a zero-cost OER-friendly option, including hopefully, to support students and instructors. Expanded capabilities are available at nominal cost per student.
-              </motion.p>
-              <motion.ul 
-                className="space-y-3"
-                variants={fadeInUp}
-                viewport={viewportOptions}
-              >
-                <li className="flex items-start">
-                  <span className="text-[#353337] mr-2">•</span>
-                  <span>Essentials and Advanced plans available.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#353337] mr-2">•</span>
-                  <span>Institutional pricing available by request.</span>
-                </li>
-              </motion.ul>
-            </div>
-          </motion.div>
-        </motion.div>
-      </section>
-
-      {/* Compliance Section */}
-      <section className="py-16 px-4 bg-[#f1ecf9]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-[#353337] mb-6">
-            Compliance Ready & Accessible
-          </h2>
-          <p className="text-lg text-[#353337] mb-8">
-            MathGPT includes accessibility-focused features, such as extended time and late submission options on assignments. MathGPT is designed with compliance and accessibility in mind to meet the needs of all students, and complies with ADA, W3C, WCAG.
-          </p>
-          <Link to="/signup" className="inline-block px-6 py-3 rounded-md bg-[#353337] text-white font-medium hover:bg-black transition-colors">
-            Create free account
-          </Link>
-        </div>
-      </section>
-
-      {/* Technology Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-[#353337] mb-8">
-            Our Technology
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div>
-              <ul className="space-y-4 list-disc pl-6">
-                <li className="text-[#353337]">
-                  <span className="font-medium">Comprehensive, domain-aware AI</span> - Designed to adapt and scale with the needs and priorities of the learning environment.
-                </li>
-                <li className="text-[#353337]">
-                  <span className="font-medium">Utilizes proprietary methods and neural networks</span> - For highly accurate computations.
-                </li>
-                <li className="text-[#353337]">
-                  <span className="font-medium">Deep, contextualized instructional material</span> - For precise and effective solutions.
-                </li>
-              </ul>
-            </div>
-            <div className="flex justify-center">
-              <img
-                src="https://media.mathgpt.ai/wp/2024/10/10082108/illustration-1-1.png"
-                alt="Technology Illustration"
-                className="max-w-full h-auto"
-              />
+              {/* Course Manager Feature */}
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-br from-blue-500/5 to-blue-600/5 rounded-2xl blur-lg -z-10"></div>
+                  <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-1">
+                    <img
+                      src="https://ext.same-assets.com/3250228889/1821207086.png"
+                      alt="Course & Assignment Manager"
+                      className="rounded-xl overflow-hidden aspect-video object-cover"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="inline-flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-3 mb-4">
+                    <Layers className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-black">Course & Assignment Manager</h3>
+                  <p className="text-gray-600 mb-6">
+                    MathGPT accelerates course development with a simple content management platform that helps build dynamic course materials and creates unique, cheat-proof formative assessments.
+                  </p>
+                  <ul className="grid gap-3">
+                    {[
+                      "Growing library of vetted courses",
+                      "Cheat-proof assessments",
+                      "Customizable content",
+                      "Seamless integration",
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-center gap-3">
+                        <div className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-500/10">
+                          <Check className="h-3.5 w-3.5 text-blue-600" />
+                        </div>
+                        <span className="text-gray-600">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 relative">
+          <div className="absolute inset-0 bg-grid-black/[0.02] -z-10"></div>
+          <div className="container px-4 md:px-6">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center rounded-lg bg-blue-500/10 px-3 py-1 text-sm mb-4 text-blue-600">
+                <Sparkles className="mr-2 h-4 w-4" />
+                Benefits
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-black via-blue-600 to-black">
+                Transform Your Math Education
+              </h2>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  icon: <Users className="h-6 w-6 text-blue-600" />,
+                  title: "Student Success",
+                  description: "MathGPT's Generative AI provides accurate, personalized tutoring that coaches students through their math challenges to foster real learning.",
+                  features: [
+                    "Foundational learning with AI-generated practice problems",
+                    "Interactive videos and reflective learning",
+                    "24/7 availability and infinite patience"
+                  ]
+                },
+                {
+                  icon: <Globe className="h-6 w-6 text-blue-600" />,
+                  title: "Institutional Success",
+                  description: "Schools achieve metrics that matter: increased course completion rates, student satisfaction, and career success for entire student cohorts.",
+                  features: [
+                    "Collaborative community sharing",
+                    "Tailored institutional accounts",
+                    "Enhanced visibility and analytics"
+                  ]
+                },
+                {
+                  icon: <Settings className="h-6 w-6 text-blue-600" />,
+                  title: "Effortless Integration",
+                  description: "MathGPT fits easily into existing institutional systems, course designs, and materials, whether as a standalone solution or LMS complement.",
+                  features: [
+                    "College bookstore availability",
+                    "MyOpenMath compatibility",
+                    "Seamless LMS integration"
+                  ]
+                }
+              ].map((benefit, i) => (
+                <motion.div
+                  key={i}
+                  className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  viewport={viewportOptions}
+                >
+                  <div className="absolute -right-6 -top-6 h-12 w-12 rounded-full bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors"></div>
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-blue-500/10 to-blue-600/10 group-hover:from-blue-500/20 group-hover:to-blue-600/20 transition-colors">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="mt-4 text-xl font-bold text-black">{benefit.title}</h3>
+                  <p className="mt-2 text-gray-600">{benefit.description}</p>
+                  <ul className="mt-4 space-y-2">
+                    {benefit.features.map((feature, j) => (
+                      <motion.li
+                        key={j}
+                        className="flex items-center gap-2"
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3, delay: j * 0.1 }}
+                        viewport={viewportOptions}
+                      >
+                        <div className="flex h-5 w-5 items-center justify-center rounded-full bg-blue-500/10">
+                          <Check className="h-3 w-3 text-blue-600" />
+                        </div>
+                        <span className="text-sm text-gray-600">{feature}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 -z-10"></div>
+          <div className="absolute inset-0 bg-grid-white/[0.05] -z-10"></div>
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+                  Ready to transform math education?
+                </h2>
+                <p className="max-w-[600px] text-white/80 md:text-xl/relaxed">
+                  Join thousands of educators already using MathGPT.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Link to="/signup" className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-sm font-medium text-blue-600 shadow transition-colors hover:bg-white/90">
+                  Try for Free
+                </Link>
+                <Link to="/contact" className="inline-flex items-center justify-center rounded-md border border-white/20 bg-transparent px-8 py-3 text-sm font-medium text-white hover:bg-white/10">
+                  Contact Sales
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 };

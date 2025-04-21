@@ -43,6 +43,13 @@ module.exports = {
                 border: 'hsl(var(--border))',
                 input: 'hsl(var(--input))',
                 ring: 'hsl(var(--ring))',
+                'mathgpt': {
+                    highlight: 'var(--mathgpt-highlight)',
+                    accent: 'var(--mathgpt-accent)',
+                    muted: 'var(--mathgpt-muted)',
+                    gold: 'var(--mathgpt-gold)',
+                    partner: 'var(--mathgpt-partner)'
+                },
                 chart: {
                     '1': 'hsl(var(--chart-1))',
                     '2': 'hsl(var(--chart-2))',
