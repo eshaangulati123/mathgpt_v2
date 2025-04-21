@@ -17,7 +17,7 @@ const Demo = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
+      <section className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-red-900 via-purple-900 to-blue-900">
         <div className="absolute inset-0 bg-grid-white/[0.05] -z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 -z-10"></div>
         <div className="container px-4 md:px-6 max-w-4xl mx-auto text-center">
