@@ -65,8 +65,8 @@ const Layout = () => {
               <nav className="hidden md:flex items-center space-x-6 absolute left-1/2 transform -translate-x-1/2">
                 {[
                   { path: "/", label: "Home" },
-                  { path: "/features", label: "Benefits" },
-                  { path: "/solutions", label: "Demo" },
+                  { path: "/features", label: "Features" },
+                  { path: "/demo", label: "Demo" },
                   { path: "/pricing", label: "Pricing" },
                   { path: "/about", label: "About Us" }
                 ].map((link) => (
@@ -150,8 +150,8 @@ const Layout = () => {
             <nav className="flex flex-col space-y-3">
               {[
                 { path: "/", label: "Home" },
-                { path: "/features", label: "Benefits" },
-                { path: "/solutions", label: "Demo" },
+                { path: "/features", label: "Features" },
+                { path: "/demo", label: "Demo" },
                 { path: "/pricing", label: "Pricing" },
                 { path: "/about", label: "About Us" },
                 { path: "/login", label: "Log in" }

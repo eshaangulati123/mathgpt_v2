@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Solutions = () => {
+const Demo = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -184,4 +184,4 @@ const Solutions = () => {
   );
 };
 
-export default Solutions;
+export default Demo;

@@ -10,12 +10,12 @@ const About = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full -mt-24">
       {/* Hero Section */}
-      <section className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
-        <div className="absolute inset-0 bg-grid-white/[0.05] -z-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 -z-10"></div>
-        <div className="container px-4 md:px-6 max-w-4xl mx-auto text-center">
+      <section className="w-full min-h-[80vh] relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 rounded-b-[50%]">
+        <div className="absolute inset-0 bg-grid-white/[0.05] -z-10 rounded-b-[50%]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 -z-10 rounded-b-[50%]"></div>
+        <div className="container px-4 md:px-6 max-w-4xl mx-auto text-center pt-[160px] pb-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

@@ -1,0 +1,9 @@
+[33mcommit 10ecb6eafb10cb48a9953d5ee89582add8a68d54[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: eshaan gulati <eshaangulati123@gmail.com>
+Date:   Sun Apr 20 21:34:28 2025 -0400
+
+    Add Benefits page with comprehensive feature list and modern design
+
+ src/pages/Benefits.tsx | 131 [32m+++++++++++++++++++++++++++++++++++++++++++++++++[m
+ src/pages/Demo.tsx     |  34 [32m++++++[m[31m-------[m
+ 2 files changed, 148 insertions(+), 17 deletions(-)

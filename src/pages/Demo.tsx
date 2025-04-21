@@ -10,17 +10,12 @@ const Demo = () => {
   };
 
   return (
-    <div className="w-full">
-      {/* Test Element */}
-      <div className="w-full py-4 bg-red-500 text-white text-center">
-        This is a test element to verify changes are being made correctly
-      </div>
-
+    <div className="w-full -mt-24">
       {/* Hero Section */}
-      <section className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
-        <div className="absolute inset-0 bg-grid-white/[0.05] -z-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 -z-10"></div>
-        <div className="container px-4 md:px-6 max-w-4xl mx-auto text-center">
+      <section className="w-full min-h-[80vh] relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 rounded-b-[50%]">
+        <div className="absolute inset-0 bg-grid-white/[0.05] -z-10 rounded-b-[50%]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 -z-10 rounded-b-[50%]"></div>
+        <div className="container px-4 md:px-6 max-w-3xl mx-auto text-center pt-[160px] pb-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,8 +25,8 @@ const Demo = () => {
               <Sparkles className="mr-2 h-4 w-4" />
               Interactive Demo
             </div>
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-yellow-400 to-green-400">
-              Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">MathGPT</span> Live
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">
+              Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">MathGPT</span> Live
             </h1>
             <p className="text-xl/relaxed text-white/90 mb-8 max-w-2xl mx-auto">
               Try our AI-powered math tutor in real-time. See how it solves problems, explains concepts, and adapts to your learning style.
@@ -61,9 +56,9 @@ const Demo = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="w-full py-12 bg-white">
-        <div className="container px-4 md:px-6 max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="w-full py-8 md:py-12 bg-white">
+        <div className="container px-4 md:px-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {[
               { icon: Users, value: "10K+", label: "Problems Solved" },
               { icon: BookOpen, value: "50+", label: "Math Topics" },
@@ -88,10 +83,10 @@ const Demo = () => {
       </section>
 
       {/* Interactive Demo Section */}
-      <section className="w-full py-20 px-4 bg-gray-50">
-        <div className="container px-4 md:px-6 max-w-7xl mx-auto">
+      <section className="w-full py-12 md:py-16 px-4 bg-gray-50">
+        <div className="container px-4 md:px-6 max-w-5xl mx-auto">
           <motion.div
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-2xl mx-auto mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -104,7 +99,7 @@ const Demo = () => {
               Enter any math problem and see how MathGPT solves it step by step.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div
               className="relative group"
               initial={{ opacity: 0, scale: 0.95 }}
@@ -175,10 +170,10 @@ const Demo = () => {
       </section>
 
       {/* Features Showcase */}
-      <section className="w-full py-20 px-4">
-        <div className="container px-4 md:px-6 max-w-7xl mx-auto">
+      <section className="w-full py-12 md:py-16 px-4">
+        <div className="container px-4 md:px-6 max-w-5xl mx-auto">
           <motion.div
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-2xl mx-auto mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -191,7 +186,7 @@ const Demo = () => {
               See MathGPT in action with these real-world examples.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 icon: BookText,
@@ -247,8 +242,8 @@ const Demo = () => {
       </section>
 
       {/* Live Demo Video */}
-      <section className="w-full py-20 px-4 bg-gray-50">
-        <div className="container px-4 md:px-6 max-w-7xl mx-auto">
+      <section className="w-full py-12 md:py-16 px-4 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div className="container px-4 md:px-6 max-w-5xl mx-auto">
           <motion.div
             className="relative group"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -257,9 +252,18 @@ const Demo = () => {
             viewport={viewportOptions}
           >
             <div className="absolute -inset-1 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-            <div className="relative bg-white p-6 rounded-2xl shadow-lg">
-              <div className="aspect-video bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl flex items-center justify-center">
-                <Play className="w-16 h-16 text-indigo-600" />
+            <div className="relative bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
+              <div className="aspect-video w-full bg-black shadow-lg overflow-hidden rounded-xl">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/c40SB-36GmQ"
+                  title="MathGPT Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
               </div>
             </div>
           </motion.div>
