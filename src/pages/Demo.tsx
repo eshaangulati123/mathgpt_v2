@@ -11,6 +11,11 @@ const Demo = () => {
 
   return (
     <div className="w-full">
+      {/* Test Element */}
+      <div className="w-full py-4 bg-red-500 text-white text-center">
+        This is a test element to verify changes are being made correctly
+      </div>
+
       {/* Hero Section */}
       <section className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
         <div className="absolute inset-0 bg-grid-white/[0.05] -z-10"></div>
