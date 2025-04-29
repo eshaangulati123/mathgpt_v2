@@ -8,6 +8,7 @@ import Demo from './pages/Demo'
 import Pricing from './pages/Pricing'
 import About from './pages/About'
 import Signup from './pages/Signup'
+import News from './pages/News'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="pricing" element={<Pricing />} />
           <Route path="about" element={<About />} />
           <Route path="signup" element={<Signup />} />
+          <Route path="news" element={<News />} />
         </Route>
       </Routes>
     </BrowserRouter>

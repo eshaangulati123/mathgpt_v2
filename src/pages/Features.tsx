@@ -12,9 +12,15 @@ import {
   Sparkles,
   ArrowRight,
   Check,
+  ChevronRight,
 } from 'lucide-react';
 
 const Features = () => {
+  const viewportOptions = {
+    once: true,
+    margin: "-100px"
+  };
+
   const features = [
     {
       icon: Brain,
@@ -25,7 +31,7 @@ const Features = () => {
         "Reliable support that scales to every student",
         "Limitless personalized tutoring"
       ],
-      image: "https://media.mathgpt.ai/wp/2024/10/16000139/mgpt-web2.png"
+      image: "https://media.mathgpt.ai/wp/2024/10/10094136/Image-placeholder-11.png"
     },
     {
       icon: BookOpen,
@@ -36,7 +42,7 @@ const Features = () => {
         "Automatic grading system",
         "Seamless learning experience integration"
       ],
-      image: "https://media.mathgpt.ai/wp/2024/10/15225425/mgpt_web1.png"
+      image: "https://media.mathgpt.ai/wp/2024/10/10081812/Image-placeholder-8-1.png"
     },
     {
       icon: Shield,
@@ -46,7 +52,8 @@ const Features = () => {
         "Browser lock down for tests & quizzes",
         "Customizable gradebook",
         "Automatic grading system"
-      ]
+      ],
+      image: "https://media.mathgpt.ai/wp/2024/10/10081830/Image-placeholder-1-2.png"
     },
     {
       icon: DollarSign,
@@ -56,7 +63,8 @@ const Features = () => {
         "Essentials and Advanced plans available",
         "Institutional pricing options",
         "OER-friendly options"
-      ]
+      ],
+      image: "https://media.mathgpt.ai/wp/2024/10/10081842/Image-placeholder-2-2.png"
     },
     {
       icon: Accessibility,
@@ -66,7 +74,8 @@ const Features = () => {
         "Extended time options",
         "Late submission flexibility",
         "ADA and VPAT compliant"
-      ]
+      ],
+      image: "https://media.mathgpt.ai/wp/2024/10/10094408/Image-placeholder-13.png"
     }
   ];
 
@@ -101,90 +110,75 @@ const Features = () => {
   ];
 
   return (
-    <div className="flex min-h-screen flex-col bg-white">
+    <div className="w-full -mt-24">
       {/* Hero Section */}
-      <section className="w-full py-16 md:py-24 lg:py-32 relative bg-gradient-to-b from-blue-50 to-white">
-        <div className="container px-4 md:px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="flex flex-col items-center mb-12">
-                <img 
-                  src="https://media.mathgpt.ai/wp/2024/10/14142203/benefits-heading.png" 
-                  alt="Why MathGPT" 
-                  className="w-full max-w-3xl h-auto mb-8"
-                />
-                <div className="text-center max-w-3xl">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-900 mb-4">
-                    The First and Only AI System for STEM Education
-                  </h1>
-                  <p className="text-xl text-gray-600">
-                    MathGPT is the first and only AI system that can reliably and accurately interpret and tutor STEM curriculum.
-                  </p>
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                  <h3 className="font-semibold text-gray-900 mb-2">For Instructors</h3>
-                  <p className="text-gray-600">MathGPT saves you time while turbocharging your teaching capacity.</p>
-                </div>
-                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                  <h3 className="font-semibold text-gray-900 mb-2">For Students</h3>
-                  <p className="text-gray-600">MathGPT helps you learn while never feeling left behind.</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+      <section className="w-full min-h-[70vh] relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 rounded-b-[30%]">
+        <div className="absolute inset-0 bg-grid-white/[0.05] -z-10 rounded-b-[30%]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 -z-10 rounded-b-[30%]"></div>
+        <div className="container px-4 md:px-6 max-w-3xl mx-auto text-center pt-[120px] pb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <img
+              src="https://media.mathgpt.ai/wp/2024/10/14142203/benefits-heading.png"
+              alt="Benefits of MathGPT"
+              className="w-full max-w-3xl mx-auto mb-8"
+            />
+            <p className="text-xl/relaxed text-white/90 mb-6 max-w-2xl mx-auto">
+              Discover how MathGPT's advanced features can revolutionize your math education experience.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Features Grid */}
-      <section className="w-full py-16 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-900 mb-4">
-              Powerful Features
+      <section className="w-full py-12 md:py-16 lg:py-20">
+        <div className="container px-5 md:px-7 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-500 mb-3">
+              Core Features
             </h2>
             <p className="text-xl text-gray-600">
-              Discover how MathGPT's advanced features can transform your math learning experience.
+              Experience the power of AI-driven math education
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
+                className="group relative"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
+                viewport={viewportOptions}
               >
-                {feature.image && (
-                  <div className="mb-4">
-                    <img 
-                      src={feature.image} 
-                      alt={feature.title} 
-                      className="w-full h-auto rounded-lg"
-                    />
+                <div className="absolute -inset-1 bg-gradient-to-br from-blue-500 to-blue-400 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                <div className="relative bg-white p-3 rounded-2xl shadow-lg h-full">
+                  {feature.image && (
+                    <div className="mb-2 overflow-hidden rounded-xl">
+                      <img 
+                        src={feature.image} 
+                        alt={feature.title} 
+                        className="w-full h-auto rounded-xl transform group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  )}
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/10 to-blue-400/10 group-hover:from-blue-500/20 group-hover:to-blue-400/20 transition-colors mb-2">
+                    <feature.icon className="h-5 w-5 text-blue-600" />
                   </div>
-                )}
-                <div className="absolute -right-6 -top-6 h-12 w-12 rounded-full bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors"></div>
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-blue-500/10 to-blue-600/10 group-hover:from-blue-500/20 group-hover:to-blue-600/20 transition-colors">
-                  <feature.icon className="h-5 w-5 text-blue-600" />
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">{feature.title}</h3>
+                  <p className="text-sm text-gray-600 mb-2">{feature.description}</p>
+                  <ul className="space-y-1">
+                    {feature.details.map((detail, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <ChevronRight className="h-3 w-3 text-blue-600" />
+                        <span className="text-xs text-gray-600">{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="mt-4 text-xl font-bold text-gray-900">{feature.title}</h3>
-                <p className="mt-2 text-gray-600">{feature.description}</p>
-                <ul className="mt-4 space-y-2">
-                  {feature.details.map((detail, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <Check className="h-4 w-4 text-blue-600" />
-                      <span className="text-sm text-gray-600">{detail}</span>
-                    </li>
-                  ))}
-                </ul>
               </motion.div>
             ))}
           </div>
@@ -192,36 +186,39 @@ const Features = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="w-full py-16 md:py-24 lg:py-32 bg-gray-50">
-        <div className="container px-4 md:px-6">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-900 mb-4">
+      <section className="w-full py-12 md:py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-blue-100">
+        <div className="container px-5 md:px-7 max-w-5xl mx-auto">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-500 mb-3">
               Key Benefits
             </h2>
             <p className="text-xl text-gray-600">
-              Experience the transformative impact of MathGPT on education.
+              Experience the transformative impact of MathGPT on education
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-3">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
+                className="group relative"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+                viewport={viewportOptions}
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
-                <p className="text-gray-600 mb-4">{benefit.description}</p>
-                <ul className="space-y-2">
-                  {benefit.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <Check className="h-4 w-4 text-blue-600" />
-                      <span className="text-sm text-gray-600">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="absolute -inset-1 bg-gradient-to-br from-blue-500 to-blue-400 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                <div className="relative bg-white p-4 rounded-2xl shadow-lg">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                  <p className="text-gray-600 mb-2">{benefit.description}</p>
+                  <ul className="space-y-1">
+                    {benefit.features.map((feature, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <ChevronRight className="h-3 w-3 text-blue-600" />
+                        <span className="text-sm text-gray-600">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -229,30 +226,49 @@ const Features = () => {
       </section>
 
       {/* Technology Section */}
-      <section className="w-full py-16 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-900 mb-4">
+      <section className="w-full py-12 md:py-16 lg:py-20">
+        <div className="container px-5 md:px-7 max-w-5xl mx-auto">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-500 mb-3">
               Our Technology
             </h2>
-            <div className="grid gap-6 md:grid-cols-3 mb-12">
-              <div className="bg-gray-50 p-6 rounded-xl">
-                <p className="text-gray-600">Comprehensive, stakeholder-focused approach that aligns with the values and priorities of the learning environment.</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-xl">
-                <p className="text-gray-600">Utilizes proprietary methods and exclusive datasets to deliver highly accurate computations.</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-xl">
-                <p className="text-gray-600">Deep, unparalleled understanding of educational material for precise and effective solutions.</p>
-              </div>
+            <div className="grid gap-4 md:grid-cols-3 mb-8">
+              {[
+                {
+                  title: "Comprehensive Approach",
+                  description: "Stakeholder-focused approach that aligns with the values and priorities of the learning environment."
+                },
+                {
+                  title: "Proprietary Methods",
+                  description: "Utilizes proprietary methods and exclusive datasets to deliver highly accurate computations."
+                },
+                {
+                  title: "Deep Understanding",
+                  description: "Deep, unparalleled understanding of educational material for precise and effective solutions."
+                }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="group relative"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={viewportOptions}
+                >
+                  <div className="absolute -inset-1 bg-gradient-to-br from-blue-500 to-blue-400 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                  <div className="relative bg-white p-4 rounded-2xl shadow-lg">
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">{item.title}</h3>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
-            <div className="relative group max-w-4xl mx-auto p-4">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-              <img
-                src="https://media.mathgpt.ai/wp/2024/10/14085522/feature-ai-tutor.png"
-                alt="MathGPT Technology"
-                className="relative w-full h-auto rounded-lg shadow-lg transition transform group-hover:scale-[1.01] duration-300"
-                style={{ maxHeight: '400px', objectFit: 'contain' }}
+            <div className="relative group max-w-4xl mx-auto p-3">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-400 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+              <img 
+                src="https://media.mathgpt.ai/wp/2024/10/10082108/illustration-1-1-1024x788.png"
+                alt="MathGPT Technology Illustration"
+                className="relative w-full h-auto rounded-xl"
               />
             </div>
           </div>
@@ -262,4 +278,4 @@ const Features = () => {
   );
 };
 
-export default Features; 
+export default Features;

@@ -1,10 +1,11 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const Layout = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("/");
+  const location = useLocation();
 
   // Handle scroll effect for navbar
   useEffect(() => {
@@ -15,11 +16,18 @@ const Layout = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Set active link based on current path
-    setActiveLink(window.location.pathname);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Update active link when location changes
+  useEffect(() => {
+    setActiveLink(location.pathname);
+  }, [location.pathname]);
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="min-h-screen w-full bg-white font-sans text-[#353337]">
@@ -68,7 +76,8 @@ const Layout = () => {
                   { path: "/features", label: "Features" },
                   { path: "/demo", label: "Demo" },
                   { path: "/pricing", label: "Pricing" },
-                  { path: "/about", label: "About Us" }
+                  { path: "/about", label: "About Us" },
+                  { path: "/news", label: "News" }
                 ].map((link) => (
                   <Link
                     key={link.path}
@@ -154,6 +163,7 @@ const Layout = () => {
                 { path: "/demo", label: "Demo" },
                 { path: "/pricing", label: "Pricing" },
                 { path: "/about", label: "About Us" },
+                { path: "/news", label: "News" },
                 { path: "/login", label: "Log in" }
               ].map((link) => (
                 <Link
@@ -230,7 +240,7 @@ const Layout = () => {
 
           {/* Copyright and Social */}
           <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-gray-200">
-            <p className="text-xs text-gray-500 mb-4 md:mb-0">© 2024 Dot It, Inc. All rights reserved.</p>
+            <p className="text-xs text-gray-500 mb-4 md:mb-0">©️ 2024 Dot It, Inc. All rights reserved.</p>
             <div className="flex space-x-4">
               <a href="https://twitter.com/mathgpt" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-700" aria-label="Twitter">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

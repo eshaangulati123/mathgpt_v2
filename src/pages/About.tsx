@@ -12,10 +12,12 @@ const About = () => {
   return (
     <div className="w-full -mt-24">
       {/* Hero Section */}
-      <section className="w-full min-h-[80vh] relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 rounded-b-[50%]">
-        <div className="absolute inset-0 bg-grid-white/[0.05] -z-10 rounded-b-[50%]"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 -z-10 rounded-b-[50%]"></div>
-        <div className="container px-4 md:px-6 max-w-4xl mx-auto text-center pt-[160px] pb-32">
+      <section className="w-full min-h-[80vh] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 rounded-b-[60%] transform scale-x-110"></div>
+        <div className="absolute inset-0 bg-grid-white/[0.05] -z-10 rounded-b-[60%] transform scale-x-110"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/50 -z-10 rounded-b-[60%] transform scale-x-110"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent -z-10"></div>
+        <div className="container px-4 md:px-6 max-w-4xl mx-auto text-center pt-[160px] pb-32 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -69,9 +71,8 @@ const About = () => {
                 key={index}
                 className="text-center p-6 rounded-2xl bg-gradient-to-br from-indigo-50 to-purple-50"
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={viewportOptions}
               >
                 <stat.icon className="w-12 h-12 mx-auto mb-4 text-indigo-600" />
                 <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
@@ -209,6 +210,49 @@ const About = () => {
         </div>
       </section>
 
+      {/* Founding Story Video Section */}
+      <section className="w-full py-20 px-4 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div className="container px-4 md:px-6 max-w-[80rem] mx-auto">
+          <motion.div
+            className="text-center max-w-4xl mx-auto mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={viewportOptions}
+          >
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 mb-6">
+              Our Founding Story
+            </h2>
+            <p className="text-xl/relaxed text-gray-600 mb-8">
+              Hear the MathGPT founding story from our chairman, Peter Relan!
+            </p>
+          </motion.div>
+          <motion.div
+            className="relative group max-w-[75rem] mx-auto"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={viewportOptions}
+          >
+            <div className="absolute -inset-1 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+            <div className="relative bg-white/80 backdrop-blur-sm p-10 rounded-2xl shadow-lg">
+              <div className="aspect-video w-full bg-black shadow-lg overflow-hidden rounded-xl">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/aJ9wfu3JJ7k"
+                  title="MathGPT Founding Story"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Team Section */}
       <section className="w-full py-20 px-4">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
@@ -226,22 +270,22 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Dr. Sarah Johnson",
-                role: "Founder & CEO",
-                bio: "Ph.D. in Applied Mathematics with over 15 years of experience in educational technology and AI research.",
+                name: "Hung Tran",
+                role: "Founder",
+                bio: "Hung founded Got It as a graduate student and now serves as the President. Prior to Got It, he worked as a software engineer and led the international effort with MIT OpenCourseWare and RICE OpenStax to develop a national scale EdTech program to serve millions of students in Vietnam. Hung holds a Ph.D. in Computer Science from The University of Iowa, as well as a Bachelor of Engineering from Hanoi University of Science and Technology.",
                 image: "https://media.mathgpt.ai/wp/2024/10/10101432/Hung-tran.png"
               },
               {
-                name: "Michael Chen",
-                role: "CTO",
-                bio: "Former AI Research Lead at Google with expertise in machine learning applications for educational platforms.",
+                name: "Matt Gabler",
+                role: "General Manager",
+                bio: "Matt serves as the General Manager of Got It. He joined in 2015 as the VP of Operations. Now in an advisory leadership role, Matt helps lead business development and partnerships for Got It's growing portfolio of products. Prior to Got It Matt held a variety of senior technology operations roles at Lyft and Google. Matt holds a BS in Genetics from the University of Rochester and an MBA degree from Duke University.",
                 image: "https://media.mathgpt.ai/wp/2024/10/10101523/Frame-1000005291.png"
               },
               {
-                name: "Dr. Robert Kim",
-                role: "Head of Education",
-                bio: "Former Mathematics Department Chair with extensive experience in curriculum development and educational technology.",
-                image: "https://media.mathgpt.ai/wp/2024/10/10101523/Frame-1000005291.png"
+                name: "Edsel Clark",
+                role: "Vice President of Operations",
+                bio: "Edsel joined the Got It team in December of 2017. As the Vice President of Operations he is focused on ensuring that our instructors and students have a great experience using MathGPT. Having spent 15 years in public education, he has a passion for students and a deep background in pedagogy. Edsel is a graduate of the University of Illinois (B.S. Math Education) and holds graduate degrees (MaEd. & Ed.D.) in Administration and Leadership.",
+                image: "https://media.mathgpt.ai/wp/2024/10/10101546/Frame-1000005290.png"
               }
             ].map((member, index) => (
               <motion.div
@@ -263,7 +307,7 @@ const About = () => {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-indigo-600 font-medium mb-4">{member.role}</p>
-                  <p className="text-gray-600">{member.bio}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
                 </div>
               </motion.div>
             ))}
